@@ -1,0 +1,149 @@
+.navbar {
+  background: #fff;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: #333;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  border-bottom-color: #000;
+  color: #333;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .nav-menu.active {
+    max-height: 300px;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 1rem 2rem;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    background-color: #f0f0f0;
+    border-left-color: #000;
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    padding: 0.8rem 1.5rem;
+  }
+}

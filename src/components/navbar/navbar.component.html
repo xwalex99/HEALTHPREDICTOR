@@ -1,1 +1,34 @@
-<p>navbar works!</p>
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo/Brand -->
+    <div class="navbar-brand">
+      <a href="/" class="logo">HealthPredictor</a>
+    </div>
+
+    <!-- Toggle Button for Mobile -->
+    <button class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu" [class.active]="isMenuOpen">
+      <li class="nav-item">
+        <a routerLink="/" class="nav-link" (click)="closeMenu()">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/prediction" class="nav-link" (click)="closeMenu()">Predicción</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/chat" class="nav-link" (click)="closeMenu()">Chat</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/login" class="nav-link" (click)="closeMenu()">Iniciar Sesión</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/register" class="nav-link" (click)="closeMenu()">Registrarse</a>
+      </li>
+    </ul>
+  </div>
+</nav>

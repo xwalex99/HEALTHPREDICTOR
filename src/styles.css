@@ -1,1 +1,308 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.btn-principal {
+  padding: 0.75rem 1.5rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-principal:hover {
+  background: #333;
+}
+
+.btn-secundario {
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secundario:hover {
+  background: #f0f0f0;
+}
+
+.btn-eliminar {
+  padding: 0.75rem 1.5rem;
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background: #991b1b;
+}
+
+.btn-aceptar {
+  padding: 0.75rem 1.5rem;
+  background: #10b981;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-aceptar:hover {
+  background: #059669;
+}
+
+.btn-s {
+  padding: 0.5rem 1rem !important;
+  font-size: 0.875rem;
+}
+
+.btn-m {
+  padding: 0.75rem 1.5rem !important;
+  font-size: 1rem;
+}
+
+.btn-l {
+  padding: 1rem 2rem !important;
+  font-size: 1.125rem;
+}
+
+.text-s {
+  font-size: 0.875rem;
+}
+
+.text-m {
+  font-size: 1rem;
+}
+
+.text-l {
+  font-size: 1.125rem;
+}
+
+.container-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
+
+.container-secundario {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
+
+.container-terciario {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 4px;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #000;
+}
+
+.card-s {
+  padding: 1rem;
+}
+
+.card-m {
+  padding: 1.5rem;
+}
+
+.card-l {
+  padding: 2rem;
+}
+
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 1.5rem 0;
+}
+
+.divider-s {
+  margin: 0.75rem 0;
+}
+
+.divider-m {
+  margin: 1.5rem 0;
+}
+
+.divider-l {
+  margin: 2rem 0;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-s {
+  gap: 0.5rem;
+}
+
+.gap-m {
+  gap: 1rem;
+}
+
+.gap-l {
+  gap: 1.5rem;
+}
+
+.section-s {
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.section-m {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+}
+
+.section-l {
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .container-principal {
+    padding: 1.5rem;
+  }
+
+  .container-secundario {
+    padding: 1rem;
+  }
+}
