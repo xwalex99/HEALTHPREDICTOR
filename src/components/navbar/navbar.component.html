@@ -6,7 +6,7 @@
     </div>
 
     <!-- Toggle Button for Mobile -->
-    <button class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()" aria-label="Toggle navigation">
+    <button class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()" aria-label="Toggle navigation" [attr.aria-expanded]="isMenuOpen">
       <span></span>
       <span></span>
       <span></span>

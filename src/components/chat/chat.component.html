@@ -1,1 +1,31 @@
-<p>chat works!</p>
+<div class="page-center">
+	<div class="container-terciario card chat-wrapper">
+		<div class="chat-container">
+			<div class="chat-header">
+				<h2>Chat de Salud</h2>
+				<p>Pregunta tus dudas médicas (esto no sustituye a un profesional).</p>
+			</div>
+
+			<div class="chat-messages" role="log" aria-live="polite">
+				<ng-container *ngFor="let m of messages">
+					<div class="message" [ngClass]="m.sender === 'bot' ? 'bot-message' : 'user-message'">
+						<p>{{ m.text }}</p>
+						<small class="msg-time">{{ m.time | date:'shortTime' }}</small>
+					</div>
+				</ng-container>
+			</div>
+
+			<form class="chat-input-area" (submit)="sendMessage(); $event.preventDefault()">
+				<input
+					type="text"
+					class="chat-input"
+					[(ngModel)]="input"
+					name="message"
+					placeholder="Escribe tu pregunta médica aquí..."
+					autocomplete="off"
+				/>
+				<button type="submit" class="btn-principal">Enviar</button>
+			</form>
+		</div>
+	</div>
+</div>
