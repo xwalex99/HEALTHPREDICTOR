@@ -60,6 +60,12 @@
   color: #333;
 }
 
+/* Active link style: keep the underline/color when the route is active */
+.nav-link.active {
+  border-bottom-color: #000;
+  color: #333;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;

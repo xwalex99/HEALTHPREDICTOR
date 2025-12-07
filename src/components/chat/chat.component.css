@@ -39,6 +39,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.75rem;
+	min-height: 48vh;
 }
 
 .message {
@@ -88,5 +89,5 @@
 @media (max-width: 520px) {
 	.chat-wrapper { padding: 0; }
 	.page-center { padding: 1rem; }
-	.chat-messages { max-height: 55vh; }
+	.chat-messages { max-height: 55vh; min-height: 50vh; }
 }

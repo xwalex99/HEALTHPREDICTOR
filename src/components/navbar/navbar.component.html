@@ -15,19 +15,19 @@
     <!-- Navigation Menu -->
     <ul class="nav-menu" [class.active]="isMenuOpen">
       <li class="nav-item">
-        <a routerLink="/" class="nav-link" (click)="closeMenu()">Inicio</a>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link" (click)="closeMenu()">Inicio</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/prediction" class="nav-link" (click)="closeMenu()">Predicción</a>
+        <a routerLink="/prediction" routerLinkActive="active" class="nav-link" (click)="closeMenu()">Predicción</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/chat" class="nav-link" (click)="closeMenu()">Chat</a>
+        <a routerLink="/chat" routerLinkActive="active" class="nav-link" (click)="closeMenu()">Chat</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/login" class="nav-link" (click)="closeMenu()">Iniciar Sesión</a>
+        <a routerLink="/login" routerLinkActive="active" class="nav-link" (click)="closeMenu()">Iniciar Sesión</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/register" class="nav-link" (click)="closeMenu()">Registrarse</a>
+        <a routerLink="/register" routerLinkActive="active" class="nav-link" (click)="closeMenu()">Registrarse</a>
       </li>
     </ul>
   </div>
