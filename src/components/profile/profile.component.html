@@ -1,0 +1,18 @@
+<div class="initial-container">
+  <div class="profile-card">
+    <h2 class="text-center" style="margin-bottom: 2rem;">Mi cuenta</h2>
+
+    <div *ngIf="isLoading">Cargando perfil...</div>
+    <div *ngIf="errorMessage && !isLoading" class="error-text">{{ errorMessage }}</div>
+
+    <div *ngIf="user && !isLoading">
+      <p><strong>Usuario:</strong> {{ user.username }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p *ngIf="user.created_at"><strong>Creado:</strong> {{ user.created_at | fechaEs }}</p>
+      <button class="btn-secundario logout-btn" type="button" (click)="logout()">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        Cerrar sesión
+      </button>
+    </div>
+  </div>
+</div>
