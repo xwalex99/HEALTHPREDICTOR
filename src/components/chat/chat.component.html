@@ -13,6 +13,13 @@
 						<small class="msg-time">{{ m.time | date:'shortTime' }}</small>
 					</div>
 				</ng-container>
+				<div *ngIf="isLoading" class="message bot-message">
+					<p>Escribiendo...</p>
+				</div>
+			</div>
+
+			<div *ngIf="errorMessage" class="error-text" style="padding: 0.5rem 1rem; margin-bottom: 0.5rem;">
+				{{ errorMessage }}
 			</div>
 
 			<form class="chat-input-area" (submit)="sendMessage(); $event.preventDefault()">
@@ -23,8 +30,11 @@
 					name="message"
 					placeholder="Escribe tu pregunta médica aquí..."
 					autocomplete="off"
+					[disabled]="isLoading"
 				/>
-				<button type="submit" class="btn-principal">Enviar</button>
+				<button type="submit" class="btn-principal" [disabled]="isLoading || !input?.trim()">
+					{{ isLoading ? 'Enviando...' : 'Enviar' }}
+				</button>
 			</form>
 		</div>
 	</div>
