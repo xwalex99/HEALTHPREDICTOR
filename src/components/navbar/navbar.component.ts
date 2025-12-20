@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { AuthService, UserResponse } from '../../services/auth.service';
+import { AuthService } from '../../services/auth.service';
+import { User } from '../../models/user.model';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -13,7 +14,7 @@ import { Observable } from 'rxjs';
 })
 export class NavbarComponent {
   isMenuOpen = false;
-  authUser$: Observable<UserResponse | null>;
+  authUser$: Observable<User | null>;
 
   constructor(private readonly authService: AuthService) {
     this.authUser$ = this.authService.authUser$;

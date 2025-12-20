@@ -3,7 +3,18 @@
     <h2 class="text-center" style="margin-bottom: 2rem;">Mi cuenta</h2>
 
     <div *ngIf="isLoading">Cargando perfil...</div>
-    <div *ngIf="errorMessage && !isLoading" class="error-text">{{ errorMessage }}</div>
+    
+    <div *ngIf="errorMessage && !isLoading" class="error-container">
+      <div class="error-text">{{ errorMessage }}</div>
+      <div *ngIf="errorMessage.includes('inicia sesión') || errorMessage.includes('autenticado')" class="auth-actions" style="margin-top: 1rem;">
+        <button class="btn-primario" type="button" (click)="goToLogin()" style="margin-right: 0.5rem;">
+          Iniciar sesión
+        </button>
+        <button class="btn-secundario" type="button" (click)="goToRegister()">
+          Registrarse
+        </button>
+      </div>
+    </div>
 
     <div *ngIf="user && !isLoading">
       <p><strong>Usuario:</strong> {{ user.username }}</p>

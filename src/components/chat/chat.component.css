@@ -60,6 +60,10 @@
 	color: #fff;
 }
 
+.user-message p {
+	color: #fff;
+}
+
 .msg-time {
 	display: block;
 	margin-top: 0.25rem;
@@ -84,10 +88,4 @@
 .chat-input:focus {
 	box-shadow: 0 0 0 3px rgba(0,0,0,0.04);
 	border-color: #000;
-}
-
-@media (max-width: 520px) {
-	.chat-wrapper { padding: 0; }
-	.page-center { padding: 1rem; }
-	.chat-messages { max-height: 55vh; min-height: 50vh; }
 }
